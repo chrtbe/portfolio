@@ -5,8 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: isProd ? "" : "",
-  assetPrefix: isProd ? "" : "",
+  basePath: isProd ? "/portfolio.github.io" : "",
+  assetPrefix: isProd ? "/portfolio.github.io/" : "",
 };
 
 export default nextConfig;
