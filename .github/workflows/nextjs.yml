@@ -18,23 +18,19 @@ jobs:
       - name: Set up pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: '7'  # Make sure to use the correct version of pnpm
+          version: '10'  
 
       # Step 3: Install dependencies
       - name: Install dependencies
         run: pnpm install
 
-      # Step 4: Build the Next.js app
-      - name: Build the Next.js app
+      # Step 4: Build and export the Next.js app (no need for `next export`)
+      - name: Build and export the Next.js app
         run: pnpm run build
 
-      # Step 5: Export static files (no need for `next export` anymore)
-      - name: Export static files
-        run: pnpm run build && pnpm run export
-
-      # Step 6: Deploy to GitHub Pages
+      # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: out
+          folder: out  # Ensure the folder points to `out` where Next.js exports static files
