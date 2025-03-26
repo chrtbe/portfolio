@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write  # This is needed to push to the repository
+  id-token: write  # Grant the required permission to request an ID token
+
 jobs:
   build:
     runs-on: ubuntu-latest
