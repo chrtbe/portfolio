@@ -49,7 +49,7 @@ jobs:
           
       - name: Install dependencies with pnpm
         run: |
-          curl -fsSL https://get.pnpm.io/v6.16.js | node - add --global pnpm
+          curl -fsSL https://get.pnpm.io/install.sh | sh -
           pnpm install
 
       - name: Build and export Next.js app
