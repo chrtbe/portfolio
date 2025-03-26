@@ -10,21 +10,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      # Step 2: Set up pnpm
       - name: Set up pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 7 # Make sure to use the appropriate pnpm version
+          version: '7'  # Use the correct pnpm version
 
+      # Step 3: Install dependencies
       - name: Install dependencies
         run: pnpm install
 
+      # Step 4: Build the Next.js app
       - name: Build the Next.js app
         run: pnpm run build
 
+      # Step 5: Export static files
+      - name: Export static files
+        run: pnpm run export
+
+      # Step 6: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        run: |
-          pnpm run export
-          # Add deploy script or GitHub Pages deployment step here
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: out
