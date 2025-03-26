@@ -6,7 +6,7 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: isProd ? "/portfolio.github.io" : "",
-  assetPrefix: isProd ? "" : "",
+  assetPrefix: isProd ? "/portfolio.github.io/" : "",
 };
 
 export default nextConfig;
