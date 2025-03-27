@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Lilita_One } from "next/font/google";
+import { Geist, Lilita_One } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Gravitas_One } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { DesktopMenu } from "@/components/desktop-menu";
 import { MobileMenu } from "@/components/mobile-menu";
@@ -13,11 +10,6 @@ const lilitaOne = Lilita_One({ subsets: ["latin"], weight: "400" });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 

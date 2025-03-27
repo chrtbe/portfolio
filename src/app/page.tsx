@@ -1,12 +1,8 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import { Suspense, useEffect, useState } from "react";
-import Scene from "./scene";
 import { Lilita_One } from "next/font/google";
 import { cn } from "@/lib/utils";
 
-export const lilitaOne = Lilita_One({ subsets: ["latin"], weight: "400" });
+const lilitaOne = Lilita_One({ subsets: ["latin"], weight: "400" });
 
 export default function Home() {
   return (
@@ -34,10 +30,6 @@ export default function Home() {
 
         <div className="absolute h-[60vw] w-[60vw] mr-0 mt-12 ml-[30vw]  md:w-[400px] md:h-[550px] md:ml-0 md:mr-[500px] sm:h-[70vh] 2xl:w-[650px] 2xl:h-[650px] bg-tertiary 2xl:mr-[775px] 2xl:mt-[80px] md:mt-[60px]"></div>
       </div>
-
-      {/* <Suspense fallback={null}>
-        <Scene />
-      </Suspense> */}
     </>
   );
 }
