@@ -6,9 +6,9 @@ on:
       - main
 
 permissions:
-  contents: write  # This is needed to push to the repository
-  pages: write     # This grants permission to deploy to GitHub Pages
-  id-token: write  # Grant the required permission to request an ID token
+  contents: write  
+  pages: write     
+  id-token: write  
 
 jobs:
   build:
