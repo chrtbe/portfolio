@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Lilita_One } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Gravitas_One } from "next/font/google";
+import { cn } from "@/lib/utils";
+import { DesktopMenu } from "@/components/desktop-menu";
+import { MobileMenu } from "@/components/mobile-menu";
+
+const lilitaOne = Lilita_One({ subsets: ["latin"], weight: "400" });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +32,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <head />
+      <body className={cn(geistSans.className, "bg-secondary")}>
+        <header className=" dat fixed w-full flex justify-between p-4 gap-4 z-10">
+          <Link
+            className={cn(lilitaOne.className, "text-2xl text-primary z-20")}
+            href="./"
+          >
+            Christine Bell
+          </Link>
+          <div className=" hidden sm:flex ">
+            <DesktopMenu />
+          </div>
+          <div className="sm:hidden">
+            <MobileMenu />
+          </div>
+        </header>
+        <main className="pt-16">{children}</main>
+        <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>
       </body>
     </html>
   );
