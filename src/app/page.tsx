@@ -28,7 +28,7 @@ export default function Home() {
           <div>PORTFOLIO</div>
         </div>
 
-        <div className="absolute h-[60vw] w-[60vw] mr-0 mt-12 ml-[30vw] md:w-[400px] md:h-[550px] md:ml-0 md:mr-[500px] sm:h-[70vh] 2xl:w-[650px] 2xl:h-[650px] bg-tertiary 2xl:mr-[775px] 2xl:mt-[80px] md:mt-[60px]"></div>
+        <div className="absolute h-[60vw] w-[60vw] mr-0 mt-8 sm:mt-12 ml-[30vw] md:w-[400px] md:h-[550px] md:ml-0 md:mr-[500px] sm:h-[70vh] 2xl:w-[650px] 2xl:h-[650px] bg-tertiary 2xl:mr-[775px] 2xl:mt-[80px] md:mt-[60px]"></div>
       </div>
     </>
   );
