@@ -2,7 +2,7 @@
 import { Lilita_One } from "next/font/google";
 import { cn } from "@/lib/utils";
 
-export const lilitaOne = Lilita_One({ subsets: ["latin"], weight: "400" });
+const lilitaOne = Lilita_One({ subsets: ["latin"], weight: "400" });
 
 export default function Home() {
   return (
