@@ -6,7 +6,8 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: isProd ? "/portfolio" : "",
-  assetPrefix: isProd ? "/portfolio/" : "",
+  assetPrefix: isProd ? "/portfolio" : "",
+  reactStrictMode: true,
 };
 
 export default nextConfig;
