@@ -2,17 +2,8 @@ import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuSub,
-  DropdownMenuSubTrigger,
-  DropdownMenuPortal,
-  DropdownMenuSubContent,
 } from "@radix-ui/react-dropdown-menu";
 import { Button } from "./ui/button";
-import { DropdownMenuShortcut } from "./ui/dropdown-menu";
 import Link from "next/link";
 
 export const MobileMenu = () => {

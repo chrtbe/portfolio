@@ -1,8 +1,4 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import { Suspense, useEffect, useState } from "react";
-import Scene from "./scene";
 import { Lilita_One } from "next/font/google";
 import { cn } from "@/lib/utils";
 
