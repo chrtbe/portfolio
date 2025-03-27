@@ -26,8 +26,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build the Next.js app
-        run: pnpm run build
+      - name: Build and export the Next.js app
+        run: pnpm run export
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
